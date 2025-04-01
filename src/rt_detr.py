@@ -8,7 +8,7 @@ from ultralytics import RTDETR
 
 # Load pre-trained model
 model_path = input("Enter the RT-DETR model (e.g., 'rtdetr-l.pt'): ")
-model = RTDETR('rtdetr-l.pt')
+model = RTDETR(model_path)
 
 # Model information
 model.info()
