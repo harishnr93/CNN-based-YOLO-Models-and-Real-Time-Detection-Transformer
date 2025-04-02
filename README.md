@@ -81,7 +81,7 @@ from ultralytics import RTDETR
 # Load the model
 model_path = input("Enter the model (e.g., 'yolo11x.pt', 'rtdetr-x.pt'): ")
 
-model = YOLO(model_path) # YOLO
+# model = YOLO(model_path) # YOLO
 model = RTDETR(model_path) # RT-DETR 
 
 # Print model info
