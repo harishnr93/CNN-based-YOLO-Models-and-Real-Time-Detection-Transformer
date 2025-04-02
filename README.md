@@ -1,12 +1,12 @@
 # 📘 YOLO Models and Real Time Detection Transformer
 
-This document presents a comprehensive comparison of the latest object detection models: **YOLOv8**, **YOLOv10**, **YOLOv11**, **YOLOv12**, and **RT-DETRv2**. These models represent distinct architectural choices, performance goals, and deployment capabilities, making them valuable for different use cases ranging from edge devices to high-accuracy cloud-based applications.
+This document presents a comprehensive comparison of the latest object detection models: **YOLOv8**, **YOLOv10**, **YOLO11**, **YOLO12**, and **RT-DETRv2**. These models represent distinct architectural choices, performance goals, and deployment capabilities, making them valuable for different use cases ranging from edge devices to high-accuracy cloud-based applications.
 
 ---
 
 ## 1. Model Overview
 
-The YOLO series has evolved significantly since its original release. YOLOv8, developed by Ultralytics, focuses on high-speed CNN-based detection. YOLOv10, YOLOv11, and YOLOv12 are developed as part of the YOLO-World initiative and aim to integrate transformer-based architectures with more intelligent learning strategies such as open-vocabulary detection and box-free training. Meanwhile, RT-DETRv2 is a modern, transformer-based model designed to address the real-time limitations of earlier DETR models.
+The YOLO series has evolved significantly since its original release. YOLOv8, developed by Ultralytics, focuses on high-speed CNN-based detection. YOLOv10, YOLO11, and YOLO12 are developed as part of the YOLO-World initiative and aim to integrate transformer-based architectures with more intelligent learning strategies such as open-vocabulary detection and box-free training. Meanwhile, RT-DETRv2 is a modern, transformer-based model designed to address the real-time limitations of earlier DETR models.
 
 ---
 
@@ -26,9 +26,9 @@ The YOLO series has evolved significantly since its original release. YOLOv8, de
 
 ## 3. Training and Fine-Tuning Strategies
 
-Training strategies differ significantly across these models. YOLOv8 and YOLOv10 generally rely on supervised learning using COCO or ImageNet-style annotations. YOLOv10 and YOLOv11 also support open-vocabulary learning by embedding textual class descriptions, which allows the models to detect novel classes during inference.
+Training strategies differ significantly across these models. YOLOv8 and YOLOv10 generally rely on supervised learning using COCO or ImageNet-style annotations. YOLOv10 and YOLO11 also support open-vocabulary learning by embedding textual class descriptions, which allows the models to detect novel classes during inference.
 
-YOLOv11 and YOLOv12 introduce box-free or label-free fine-tuning modes, reducing reliance on high-quality annotations. YOLOv12 and RT-DETRv2 embrace a set-based prediction paradigm that removes the need for NMS and uses matching algorithms during training.
+YOLO11 and YOLO12 introduce box-free or label-free fine-tuning modes, reducing reliance on high-quality annotations. YOLO12 and RT-DETRv2 embrace a set-based prediction paradigm that removes the need for NMS and uses matching algorithms during training.
 
 ---
 
@@ -40,17 +40,17 @@ The table below summarizes key inference metrics for each model (approximate val
 |-----------|----------|-------------|------------|---------------|
 | YOLOv8x   | ~53.0    | ~165        | ~68        | ~6            |
 | YOLOv10   | ~54.0    | ~140        | ~85        | ~7–8          |
-| YOLOv11   | ~55.5    | ~120        | ~120       | ~10           |
-| YOLOv12   | ~57.0    | ~100        | ~140+      | ~12–15        |
+| YOLO11    | ~55.5    | ~120        | ~120       | ~10           |
+| YOLO12    | ~57.0    | ~100        | ~140+      | ~12–15        |
 | RT-DETRv2 | ~56.0    | ~110–140    | ~100       | ~10–12        |
 
-YOLOv8 is the fastest and lightest, suitable for embedded and mobile deployment. YOLOv10 and YOLOv11 offer a sweet spot between generalization and speed. YOLOv12 maximizes accuracy but at the cost of latency. RT-DETRv2 matches YOLOv11 and YOLOv12 in accuracy while retaining practical inference speed.
+YOLOv8 is the fastest and lightest, suitable for embedded and mobile deployment. YOLOv10 and YOLO11 offer a sweet spot between generalization and speed. YOLO12 maximizes accuracy but at the cost of latency. RT-DETRv2 matches YOLOv11 and YOLOv12 in accuracy while retaining practical inference speed.
 
 ---
 
 ## 5. Deployment and Use Cases
 
-Deployment suitability varies with the architecture. YOLOv8 and YOLOv10 are highly optimized for edge deployment and are easily converted to formats like ONNX and TensorRT. YOLOv11 and YOLOv12, with heavier backbones, are more suited for cloud or server environments where latency is less critical. RT-DETRv2 aims to bridge this gap by optimizing the transformer design to run efficiently even in real-time applications.
+Deployment suitability varies with the architecture. YOLOv8 and YOLOv10 are highly optimized for edge deployment and are easily converted to formats like ONNX and TensorRT. YOLO11 and YOLO12, with heavier backbones, are more suited for cloud or server environments where latency is less critical. RT-DETRv2 aims to bridge this gap by optimizing the transformer design to run efficiently even in real-time applications.
 
 In terms of use cases:
 - **YOLOv8** is ideal for fast, resource-constrained applications like robotics, drones, and mobile vision.
