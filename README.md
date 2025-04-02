@@ -44,7 +44,7 @@ The table below summarizes key inference metrics for each model (approximate val
 | YOLO12    | ~57.0    | ~100        | ~140+      | ~12–15        |
 | RT-DETRv2 | ~56.0    | ~110–140    | ~100       | ~10–12        |
 
-YOLOv8 is the fastest and lightest, suitable for embedded and mobile deployment. YOLOv10 and YOLO11 offer a sweet spot between generalization and speed. YOLO12 maximizes accuracy but at the cost of latency. RT-DETRv2 matches YOLOv11 and YOLOv12 in accuracy while retaining practical inference speed.
+YOLOv8 is the fastest and lightest, suitable for embedded and mobile deployment. YOLOv10 and YOLO11 offer a sweet spot between generalization and speed. YOLO12 maximizes accuracy but at the cost of latency. RT-DETRv2 matches YOLO11 and YOLO12 in accuracy while retaining practical inference speed.
 
 ---
 
