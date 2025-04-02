@@ -7,7 +7,17 @@ Email: harrish.nr@gmail.com
 from ultralytics import RTDETR
 
 # Load pre-trained model
-model_path = input("Enter the RT-DETR model (e.g., 'rtdetr-l.pt'): ")
+
+""" 
+-------------------------------------------------------------------------------------
+  Model Type            Pre-trained Weights   Total Layers    Params(M)     GFLOPS           
+-------------------------------------------------------------------------------------
+ RT-DETR Large                rtdetr-l.pt         449           32.97       108.3
+-------------------------------------------------------------------------------------
+ RT-DETR Extra-Large          rtdetr-x.pt         567           67.47       232.7
+-------------------------------------------------------------------------------------
+"""
+model_path = input("Enter the RT-DETR model (e.g., 'rtdetr-x.pt'): ")
 model = RTDETR(model_path)
 
 # Model information
