@@ -106,6 +106,10 @@ The script will display the detection results and save the output video in the s
 ## 7. YOLO and RT-DETR artifacts
 
 <div align="left">
+  <img src="./results/object_detection_media.gif" alt="Object Detection Animation" width="1000"><br><br>>
+</div>
+
+<div align="left">
 <img src="./results/result_artifacts.jpg" alt="YOLO and and RT-DETR artifacts" width="1000"><br><br>
 </div>
 
