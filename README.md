@@ -95,7 +95,7 @@ results = model(inference_data_path, show=True, save=True)
 
 ### 🔧 Script Execution
 
-1. Save the code above into a file: `object_detection_infer.py`
+1. Save the code above into a file: e.g., `object_detection_infer.py`
 2. Install the required library: `pip install ultralytics`
 3. Execute the script using: `python object_detection_infer.py`
 4. When prompted, enter your model checkpoint and video file path
