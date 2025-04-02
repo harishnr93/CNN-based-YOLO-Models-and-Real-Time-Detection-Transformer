@@ -1,6 +1,6 @@
-# 📘 YOLO Models and Real Time Detection Transformer
+# YOLO Models and Real Time Detection Transformer
 
-This document presents a comprehensive comparison of the latest object detection models: **YOLOv8**, **YOLOv10**, **YOLO11**, **YOLO12**, and **RT-DETRv2**. These models represent distinct architectural choices, performance goals, and deployment capabilities, making them valuable for different use cases ranging from edge devices to high-accuracy cloud-based applications.
+This project presents a comprehensive comparison of the latest object detection models: **YOLOv8**, **YOLOv10**, **YOLO11**, **YOLO12**, and **RT-DETRv2**. These models represent distinct architectural choices, performance goals, and deployment capabilities, making them valuable for different use cases ranging from edge devices to high-accuracy cloud-based applications.
 
 ---
 
@@ -13,6 +13,10 @@ The YOLO series has evolved significantly since its original release. YOLOv8, de
 ## 2. Architecture Comparison
 
 **YOLOv8** is built on traditional CNN modules such as `C2f`, `SPPF`, and `PAN`, with a strong emphasis on efficiency. It features an anchor-free, decoupled detection head and supports rotated bounding boxes (OBB).
+
+- **C2f (Concatenate Two Forks)**: A lightweight block for feature extraction that balances efficiency and expressiveness.
+- **SPPF (Spatial Pyramid Pooling – Fast)**: Pools features at multiple receptive fields to capture both local and global context.
+- **PAN (Path Aggregation Network)**: Used in the neck to combine low- and high-level features across different resolutions.
 
 **YOLOv10** begins the hybrid transition, combining CNN backbones with vision transformers. It enables open-vocabulary detection by aligning detection heads with text embeddings (e.g., CLIP), allowing it to generalize to unseen classes.
 
@@ -59,14 +63,53 @@ In terms of use cases:
 - **RT-DETRv2** is well-suited for real-time applications requiring accurate predictions without post-processing, such as autonomous driving or live video analysis.
 
 ---
-## 6. YOLO and RT-DETR artifacts
+## 6. Sample Code  
+
+The following script demonstrates how to use the YOLO and RT-DETRv2 model from the `ultralytics` library:
+
+1. Loads a pre-trained YOLO/RT-DETR model using a user-provided model checkpoint.
+2. Displays model details like architecture, layer structure, and parameter count.
+3. Runs inference on a video file, displaying and saving the results automatically.
+
+
+Below is a simple **inference** script using the `ultralytics` library and **YOLO**/**RT-DETRv2** model:
+
+```python
+from ultralytics import YOLO
+from ultralytics import RTDETR
+
+# Load the model
+model_path = input("Enter the model (e.g., 'yolo11x.pt', 'rtdetr-x.pt'): ")
+
+model = YOLO(model_path) # YOLO
+model = RTDETR(model_path) # RT-DETR 
+
+# Print model info
+model.info()
+
+# Run inference on a video
+inference_data_path = input("Enter the path to the video file (e.g., 'highway.mp4'): ")
+results = model(inference_data_path, show=True, save=True)
+```
+### 🔧 Script Execution
+
+1. Save the code above into a file: `object_detection_infer.py`
+2. Install the required library: `pip install ultralytics`
+3. Execute the script using: `python object_detection_infer.py`
+4. When prompted, enter your model checkpoint and video file path
+
+The script will display the detection results and save the output video in the same directory.
+
+> Note: We can replace the input prompts with hardcoded paths if automating the script.
+---
+## 7. YOLO and RT-DETR artifacts
 
 <div align="left">
 <img src="./results/result_artifacts.jpg" alt="YOLO and and RT-DETR artifacts" width="1000"><br><br>
 </div>
 
 ---
-## 7. Summary
+## Summary
 
 Each model brings something unique:
 
