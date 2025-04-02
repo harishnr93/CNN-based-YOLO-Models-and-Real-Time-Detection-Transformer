@@ -91,6 +91,8 @@ model.info()
 inference_data_path = input("Enter the path to the video file (e.g., 'highway.mp4'): ")
 results = model(inference_data_path, show=True, save=True)
 ```
+> Note: We can replace the input prompts with hardcoded paths if automating the script.
+
 ### 🔧 Script Execution
 
 1. Save the code above into a file: `object_detection_infer.py`
@@ -100,7 +102,6 @@ results = model(inference_data_path, show=True, save=True)
 
 The script will display the detection results and save the output video in the same directory.
 
-> Note: We can replace the input prompts with hardcoded paths if automating the script.
 ---
 ## 7. YOLO and RT-DETR artifacts
 
